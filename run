@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Compiles via the Makefile and runs the program.
+#Author: Nate Lao
+
+src="CountLetters.java"
+exe="CountLetters"
+
+printf 'Compiling '$src'\n'
+make
+
+#If the program compiles, run it
+if [ $? -eq 0 ]
+then
+	printf '\nRunning '$exe'\n'
+	java CountLetters
+fi
